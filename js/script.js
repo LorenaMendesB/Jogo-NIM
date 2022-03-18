@@ -26,5 +26,15 @@ function lerArquivoRanque() {
    ranque = JSON.parse();
 }
 
+// Função para manipular as jogadas do multiplayer de dois jogadores
+function multiplayerDoisJogadores(){
+
+}
+
+// Função para manipular as jogadas do multiplayer versus computador.
+function multiplayerVSComputador(){
+
+}
+
 // Função start iniciar o jogo NIM.
 function start() {}
