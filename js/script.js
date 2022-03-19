@@ -29,6 +29,7 @@ function lerArquivoRanque() {
 // Função para manipular as jogadas do multiplayer de dois jogadores
 function multiplayerDoisJogadores() {
 
+
 }
 
 // Função para manipular as jogadas do multiplayer versus computador.
@@ -61,4 +62,6 @@ function computador(contexto){
 function start() {
   listaRanques = lerArquivoRanque();
   document.getElementById('telaInicio').style.visibility = "hidden";
+  multiplayerDoisJogadores();
+  multiplayerVSComputador();
 }
