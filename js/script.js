@@ -54,7 +54,7 @@ function salvarRecord() {
 }
 
 // Função para decidir as jogadas do computador.
-function computador(contexto){
+function computador(contexto) {
 
 }
 
@@ -62,6 +62,8 @@ function computador(contexto){
 function start() {
   listaRanques = lerArquivoRanque();
   document.getElementById('telaInicio').style.visibility = "hidden";
-  multiplayerDoisJogadores();
-  multiplayerVSComputador();
+  //switch 
+  if (butt1 == 1) { multiplayerDoisJogadores(); }
+  else
+    multiplayerVSComputador();
 }
