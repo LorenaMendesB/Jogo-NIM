@@ -10,7 +10,7 @@ main {
 }
 
 .button:active {
-    transform: translateY(4px);
+  transform: translateY(4px);
 
 }
 

@@ -70,6 +70,5 @@ function start() {
 //Função para mudar as moedas
 
 function stylemoedas(){
-  
-  
+  document.getElementById('moeda').style.visibility = "hidden";
 }
