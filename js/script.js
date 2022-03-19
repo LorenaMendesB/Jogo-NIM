@@ -60,5 +60,5 @@ function computador(contexto){
 // Função start iniciar o jogo NIM.
 function start() {
   listaRanques = lerArquivoRanque();
-  document.getElementById('telaStart').style.visibility = 'hi'
+  document.getElementById('telaStart').style.visibility = "hidden";
 }
