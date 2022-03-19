@@ -1,13 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-main{
+main {
     text-align: center;
     margin-top: 50px;
     justify-content: center;
 }
+
 .button:active {
     transform: translateY(4px);
+
+}
+
+.moeda:hover {
+    fill: black;
 }

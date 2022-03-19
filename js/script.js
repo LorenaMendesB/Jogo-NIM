@@ -67,3 +67,9 @@ function start() {
   else
     multiplayerVSComputador();
 }
+//Função para mudar as moedas
+
+function stylemoedas(){
+  
+  
+}
