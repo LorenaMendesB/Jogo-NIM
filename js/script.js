@@ -63,7 +63,7 @@ function start() {
   listaRanques = lerArquivoRanque();
   document.getElementById('telaInicio').style.visibility = "hidden";
   if(button == 1) 
-      multiplayerDoisJogadores()
+    multiplayerDoisJogadores()
   else
-      multiplayerVSComputador();
+    multiplayerVSComputador();
 }
