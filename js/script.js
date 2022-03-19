@@ -62,8 +62,8 @@ function computador(contexto) {
 function start() {
   listaRanques = lerArquivoRanque();
   document.getElementById('telaInicio').style.visibility = "hidden";
-  //switch 
-  if (butt1 == 1) { multiplayerDoisJogadores(); }
+  if(button == 1) 
+      multiplayerDoisJogadores()
   else
-    multiplayerVSComputador();
+      multiplayerVSComputador();
 }
