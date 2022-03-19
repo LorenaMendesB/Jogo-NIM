@@ -44,6 +44,7 @@ function salvarRecord() {
       listaRanques.pop(i);
     }
   }
+  escreverArquivoRanque(listaRanques);
 }
 
 // Função start iniciar o jogo NIM.
