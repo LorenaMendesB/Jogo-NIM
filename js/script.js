@@ -27,11 +27,16 @@ function lerArquivoRanque() {
 }
 
 // Função para manipular as jogadas do multiplayer de dois jogadores
-function multiplayerDoisJogadores() {}
+function multiplayerDoisJogadores() {
+
+}
 
 // Função para manipular as jogadas do multiplayer versus computador.
-function multiplayerVSComputador() {}
+function multiplayerVSComputador() {
 
+}
+
+// Função para adicionar o novo recorde e salvar em um arquivo local. 
 function salvarRecord() {
   ranque.nome = document.getElementById("entradaNome").textContent;
   ranque.score = document.getElementById("recorde").textContent;
@@ -45,6 +50,11 @@ function salvarRecord() {
     }
   }
   escreverArquivoRanque(listaRanques);
+}
+
+// Função para decidir as jogadas do computador.
+function computador(contexto){
+
 }
 
 // Função start iniciar o jogo NIM.
