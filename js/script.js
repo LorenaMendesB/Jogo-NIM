@@ -29,11 +29,13 @@ function lerArquivoRanque() {
 // Função para manipular as jogadas do multiplayer de dois jogadores
 function multiplayerDoisJogadores() {
   document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
+
 }
 
 // Função para manipular as jogadas do multiplayer versus computador.
 function multiplayerVSComputador() {
   document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
+  
 }
 
 // Função para adicionar o novo recorde e salvar em um arquivo local. 
