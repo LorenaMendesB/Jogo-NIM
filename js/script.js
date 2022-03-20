@@ -63,16 +63,25 @@ function ajuda(){
   document.getElementById('telaAjudaID').style.visibility = "visible";
 }
 
+function ranque(){
+  document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
+  document.getElementById('telaRanqueID').style.visibility = "visible";
+}
+
 // Função start iniciar o jogo NIM.
 function start() {
   listaRanques = lerArquivoRanque();
   document.getElementById('telaIniciarID').style.visibility = "hidden";
   document.getElementById('telaOpcoesInicioID').style.visibility = "visible";
   document.getElementById('telaAjudaID').style.visibility = "hidden";
+  document.getElementById('telaRanqueID').style.visibility = "hidden";
+  document.getElementById('fimDejogoID').style.visibility = "hidden";
 }
 
 // Função para deixar as telas invisíveis ao entrar na página.
 window.onload = function (){
+  document.getElementById('telaRanqueID').style.visibility = "hidden";
   document.getElementById('telaAjudaID').style.visibility = "hidden";
   document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
+  document.getElementById('fimDejogoID').style.visibility = "hidden";
 }
