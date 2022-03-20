@@ -4,6 +4,7 @@ var jogadores = {
   jogador2: { pontos: 0 },
 };
 
+var colunas
 // Constante com o nome do arquivo com o ranque.
 const NOME_ARQUIVO = "ranque.json";
 
@@ -17,7 +18,7 @@ var listaRanques = [];
 // Função para escrever arquivo de ranque dos jogadores.
 function escreverArquivoRanque(objeto) {
   let objJson = JSON.stringify(objeto);
-  let teste = localStorage.setItem(NOME_ARQUIVO, objJson);
+  localStorage.setItem(NOME_ARQUIVO, objJson);
 }
 
 // Função para ler o arquivo que guarda os ranques dos jogadores.
@@ -53,35 +54,16 @@ function salvarRecord() {
 }
 
 // Função para decidir as jogadas do computador.
-function computador(contexto) {
-
-}
-
-// A função ajuda a abrir a tela de sobre do jogo.
-function ajuda(){
-  document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
-  document.getElementById('telaAjudaID').style.visibility = "visible";
-}
-
-function recordes(){
-  document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
-  document.getElementById('telaRanqueID').style.visibility = "visible";
+function computador() {
 }
 
 // Função start iniciar o jogo NIM.
 function start() {
+  colunas = {coluna1: 1, coluna2: 3, coluna3: 5, coluna4: 7};
   listaRanques = lerArquivoRanque();
-  document.getElementById('telaIniciarID').style.visibility = "hidden";
-  document.getElementById('telaOpcoesInicioID').style.visibility = "visible";
-  document.getElementById('telaAjudaID').style.visibility = "hidden";
-  document.getElementById('telaRanqueID').style.visibility = "hidden";
-  document.getElementById('fimDejogoID').style.visibility = "hidden";
+
 }
 
 // Função para deixar as telas invisíveis ao entrar na página.
 window.onload = function (){
-  document.getElementById('telaRanqueID').style.visibility = "hidden";
-  document.getElementById('telaAjudaID').style.visibility = "hidden";
-  document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
-  document.getElementById('fimDejogoID').style.visibility = "hidden";
 }

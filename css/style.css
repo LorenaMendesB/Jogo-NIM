@@ -3,16 +3,9 @@
     padding: 0;
 }
 
-main {
+.conteiner {
     text-align: center;
     margin-top: 50px;
     justify-content: center;
-}
-.moeda:hover{
-    transform: translateY(5px)
-}
-.button:active {
-  transform: translateY(4px);
-
 }
 
