@@ -8,12 +8,11 @@ main {
     margin-top: 50px;
     justify-content: center;
 }
-
+.moeda:hover{
+    transform: translateY(5px)
+}
 .button:active {
   transform: translateY(4px);
 
 }
 
-.moeda:hover {
-    fill: black;
-}

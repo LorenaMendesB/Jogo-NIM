@@ -28,13 +28,12 @@ function lerArquivoRanque() {
 
 // Função para manipular as jogadas do multiplayer de dois jogadores
 function multiplayerDoisJogadores() {
-
-
+  document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
 }
 
 // Função para manipular as jogadas do multiplayer versus computador.
 function multiplayerVSComputador() {
-
+  document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
 }
 
 // Função para adicionar o novo recorde e salvar em um arquivo local. 
@@ -56,6 +55,12 @@ function salvarRecord() {
 // Função para decidir as jogadas do computador.
 function computador(contexto) {
 
+}
+
+// A função ajuda a abrir a tela de sobre do jogo.
+function ajuda(){
+  document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
+  document.getElementById('telaAjudaID').style.visibility = "visible";
 }
 
 // Função start iniciar o jogo NIM.
