@@ -63,7 +63,7 @@ function ajuda(){
   document.getElementById('telaAjudaID').style.visibility = "visible";
 }
 
-function ranque(){
+function recordes(){
   document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
   document.getElementById('telaRanqueID').style.visibility = "visible";
 }
