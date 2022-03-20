@@ -63,17 +63,25 @@ function ajuda(){
   document.getElementById('telaAjudaID').style.visibility = "visible";
 }
 
+function recordes(){
+  document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
+  document.getElementById('telaRanqueID').style.visibility = "visible";
+}
+
 // Função start iniciar o jogo NIM.
 function start() {
   listaRanques = lerArquivoRanque();
-  document.getElementById('telaInicio').style.visibility = "hidden";
-  if(button == 1) 
-    multiplayerDoisJogadores()
-  else
-    multiplayerVSComputador();
+  document.getElementById('telaIniciarID').style.visibility = "hidden";
+  document.getElementById('telaOpcoesInicioID').style.visibility = "visible";
+  document.getElementById('telaAjudaID').style.visibility = "hidden";
+  document.getElementById('telaRanqueID').style.visibility = "hidden";
+  document.getElementById('fimDejogoID').style.visibility = "hidden";
 }
-//Função para mudar as moedas
 
-function stylemoedas(){
-  document.getElementById('moeda').style.visibility = "hidden";
+// Função para deixar as telas invisíveis ao entrar na página.
+window.onload = function (){
+  document.getElementById('telaRanqueID').style.visibility = "hidden";
+  document.getElementById('telaAjudaID').style.visibility = "hidden";
+  document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
+  document.getElementById('fimDejogoID').style.visibility = "hidden";
 }
