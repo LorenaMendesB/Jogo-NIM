@@ -11,3 +11,7 @@ main{
 .button:active {
     transform: translateY(4px);
 }
+.bg_blur{
+    filter: blur(5vh);
+    backdrop-filter: blur(15px);
+}

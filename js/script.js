@@ -58,12 +58,22 @@ function computador(contexto) {
 
 }
 
+// A função ajuda a abrir a tela de sobre do jogo.
+function ajuda(){
+  document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
+  document.getElementById('telaAjudaID').style.visibility = "visible";
+}
+
 // Função start iniciar o jogo NIM.
 function start() {
   listaRanques = lerArquivoRanque();
-  document.getElementById('telaInicio').style.visibility = "hidden";
-  if(button == 1) 
-    multiplayerDoisJogadores()
-  else
-    multiplayerVSComputador();
+  document.getElementById('telaIniciarID').style.visibility = "hidden";
+  document.getElementById('telaOpcoesInicioID').style.visibility = "visible";
+  document.getElementById('telaAjudaID').style.visibility = "hidden";
+}
+
+// Função para deixar as telas invisíveis ao entrar na página.
+window.onload = function (){
+  document.getElementById('telaAjudaID').style.visibility = "hidden";
+  document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
 }
