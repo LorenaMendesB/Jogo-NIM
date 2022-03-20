@@ -8,6 +8,9 @@ main{
     margin-top: 50px;
     justify-content: center;
 }
+.moeda:hover{
+    transform: scale(10px);
+}
 .button:active {
     transform: translateY(4px);
 }
