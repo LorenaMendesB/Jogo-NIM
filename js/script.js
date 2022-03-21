@@ -127,10 +127,6 @@ function pegarFosforos(obj) {
     }
     document.getElementById(listaIds[i].id).style.visibility = "hidden";
     quantidade++;
-    // }
-    // if(temp== true){
-    //   quantidade = (Math.floor (Math.random()*fosforosValor)) - colunas[classNome].pegos
-    // }
     quantidade = quantidade - colunas[classNome].pegos;
     colunas[classNome].restos -= quantidade;
     colunas[classNome].pegos += quantidade;
