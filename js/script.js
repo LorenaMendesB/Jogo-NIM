@@ -4,7 +4,7 @@ var jogadores = {
   jogador2: { pontos: 0 },
 };
 
-var jogadas[];
+var jogadas = [];
 
 var colunas
 // Constante com o nome do arquivo com o ranque.
@@ -57,7 +57,7 @@ function salvarRecord() {
   escreverArquivoRanque(listaRanques);
 }
 
-function remove{
+function remove(){
 
 }
 
