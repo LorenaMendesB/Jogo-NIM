@@ -62,7 +62,7 @@ function multiplayerVSComputador() {
     vezDe: 1,
     jogador1: { pontos: 0, fosforos: 0 },
     computador: { pontos: 0, fosforos: 0 },
-
+ 
   };
   document.getElementById("textoPlay2").textContent = "Computador";
   document.getElementById("telaOpcoesID").style.visibility = "hidden";
@@ -86,7 +86,7 @@ function salvarRecord() {
 }
 
 // Função para decidir as jogadas do computador.
-function computador() {
+function computadorPlay() {
   let jogadaComputador = [];
   while(1){
     let numColuna = Math.floor(Math.random()*4);
