@@ -87,10 +87,15 @@ function salvarRecord() {
 
 // Função para decidir as jogadas do computador.
 function computador() {
-
-  //var random = Math.floor(Math.random()*jogadas.length);
-  //remove(jogadas[random]);
-
+  let jogadaComputador = [];
+  while(1){
+    let numColuna = Math.floor(Math.random()*4);
+    if(colunas['coluna'+ numColuna].restos > 0){
+       let quantFosf = Math.floor(Math.random()*colunas['coluna'+ numColuna].restos) + 1;
+       jogadaComputador = ['coluna'+ numColuna, quantFosf];
+       return jogadaComputador;
+    }
+  }
 }
 
 function hoverFosforos(obj) {
