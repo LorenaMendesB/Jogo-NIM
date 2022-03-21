@@ -67,11 +67,10 @@ function start() {
 }
 
 function hoverFosforos(obj){
-  document.getElementById(ids[i]).style.stroke = '#4bca7ebd';
-  document.getElementById(ids[i]).style.strokeWidth = 2;
+  document.getElementById(obj.path[1].id).style.stroke = '#4bca7ebd';
+  document.getElementById(obj.path[1].id).style.strokeWidth = 2;
 }
 function removeStroke(obj){
-  let ids = listaIds(obj.path[1].value);
   document.getElementById(obj.path[1].id).style.stroke = 'none';
   document.getElementById(obj.path[1].id).strokeWidth = 0;
 }
