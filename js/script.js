@@ -8,7 +8,7 @@ var listaIdsFosforos = [];
 var colunas;
 // Constante com o nome do arquivo com o ranque.
 const NOME_ARQUIVO = "ranque.json";
-
+var fosforosValor;
 // Variável de 1 ranque.
 var ranque = {
   nome: "",
@@ -30,6 +30,7 @@ function lerArquivoRanque() {
 
 // Função para manipular as jogadas do multiplayer de dois jogadores
 function multiplayerDoisJogadores() {
+  fosforosValor = 16;
   colunas = {
     coluna1: { restos: 1, pegos: 0 },
     coluna2: { restos: 3, pegos: 0 },
@@ -45,6 +46,8 @@ function multiplayerDoisJogadores() {
 
 // Função para manipular as jogadas do multiplayer versus computador.
 function multiplayerVSComputador() {
+  fosforosValor = 16;
+  jogadores.vezDe = 1;
   colunas = {
     coluna1: { restos: 1, pegos: 0 },
     coluna2: { restos: 3, pegos: 0 },
@@ -112,16 +115,29 @@ function pegarFosforos(obj) {
   quantidade = quantidade - colunas[classNome].pegos;
   colunas[classNome].restos -= quantidade;
   colunas[classNome].pegos  += quantidade;
+  fosforosValor -= quantidade;
 
   if(jogadores.vezDe == 1){
     jogadores.jogador1.fosforos += quantidade;
     jogadores.jogador1.pontos += quantidade;
     document.getElementById('scorePlay1').textContent = jogadores.jogador1.fosforos;
+    if(fosforosValor == 0){
+      document.getElementById("TelaWinGameID").style.visibility = "visible";
+      document.getElementById('playerVencedor').textContent = 'Player 1';
+      document.getElementById('fosfPegos').textContent = jogadores.jogador1.fosforos;
+      document.getElementById('ptsTotais').textContent = jogadores.jogador1.pontos;
+    }
     jogadores.vezDe = 2;
   }else if(jogadores.vezDe == 2){
     jogadores.jogador2.fosforos += quantidade;
     jogadores.jogador2.pontos += quantidade;
     document.getElementById('scorePlay2').textContent = jogadores.jogador2.fosforos;
+    if(fosforosValor == 0){
+      document.getElementById("TelaWinGameID").style.visibility = "visible";
+      document.getElementById('playerVencedor').textContent = 'Player 2';
+      document.getElementById('fosfPegos').textContent = jogadores.jogador2.fosforos;
+      document.getElementById('ptsTotais').textContent = jogadores.jogador2.pontos;
+    }
     jogadores.vezDe = 1;
   }
 
