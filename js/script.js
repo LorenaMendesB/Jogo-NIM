@@ -1,5 +1,6 @@
 // Variável global  que armazena os dados das jogadas dos dois jogadores.
 var jogadores = {
+  vezDe: 1,
   jogador1: { pontos: 0 },
   jogador2: { pontos: 0 },
 };
@@ -29,12 +30,14 @@ function lerArquivoRanque() {
 
 // Função para manipular as jogadas do multiplayer de dois jogadores
 function multiplayerDoisJogadores() {
+  document.getElementById('textoPlay2').textContent = 'Player 2';
   document.getElementById('telaOpcoesID').style.visibility = "hidden";
 
 }
 
 // Função para manipular as jogadas do multiplayer versus computador.
 function multiplayerVSComputador() {
+  document.getElementById('textoPlay2').textContent = 'Computador';
   document.getElementById('telaOpcoesID').style.visibility = "hidden";
   
 }
@@ -67,23 +70,21 @@ function start() {
 }
 
 function hoverFosforos(obj){
-  document.getElementById(obj.path[1].id).style.stroke = '#4bca7ebd';
-  document.getElementById(obj.path[1].id).style.strokeWidth = 2;
-  for(let i = 0; i < obj.path[2].children.length; i++){
-    if(obj.path[2].children[i].id == obj.path[1].id)
+  var aux = obj.path[2].children;
+  document.getElementById(obj.path[0].id).style.fillOpacity = 0.5;
+  for(let i = 0; i < aux.length; i++){
+    if(aux[i].children[1].id == obj.path[0].id)
       break;
-    document.getElementById(obj.path[2].children[i].id).style.stroke = '#4bca7ebd';
-    document.getElementById(obj.path[2].children[i].id).style.strokeWidth = 2;
+      document.getElementById(aux[i].children[1].id).style.fillOpacity = 0.5;  
   }
 }
 function removeStroke(obj){
-  document.getElementById(obj.path[1].id).style.stroke = 'none';
-  document.getElementById(obj.path[1].id).strokeWidth = 0;
-  for(let i = 0; i < obj.path[2].children.length; i++){
-    if(obj.path[2].children[i].id == obj.path[1].id)
+  var aux = obj.path[2].children;
+  document.getElementById(obj.path[0].id).style.fillOpacity = 0;
+  for(let i = 0; i <  aux.length; i++){
+    if(aux[i].children[1].id == obj.path[1].id)
       break;
-    document.getElementById(obj.path[2].children[i].id).style.stroke = 'none';
-    document.getElementById(obj.path[2].children[i].id).style.strokeWidth = 0;
+      document.getElementById(aux[i].children[1].id).style.fillOpacity = 0;  
   }
 }
 
@@ -92,9 +93,9 @@ window.onload = function (){
   document.getElementById('TelaWinGameID').style.visibility = "hidden";
   document.getElementById("btnVersPC").addEventListener("click", multiplayerVSComputador);
   document.getElementById("btnVersPlayers").addEventListener("click", multiplayerDoisJogadores);
-  let colunas = document.getElementsByClassName('fosforo');
+  let colunas = document.getElementsByClassName('fosforoGrupo');
   for(let i = 0; i < colunas.length; i++){
-    document.getElementById(colunas[i].id).addEventListener("mouseover", hoverFosforos);
-    document.getElementById(colunas[i].id).addEventListener("mouseout", removeStroke);
+    document.getElementById(colunas[i].children[1].id).addEventListener("mouseover", hoverFosforos);
+    document.getElementById(colunas[i].children[1].id).addEventListener("mouseout", removeStroke);
   }
 }
