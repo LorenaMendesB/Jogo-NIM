@@ -249,4 +249,4 @@ window.onload = function () {
       .getElementById(colunas[i].children[1].id)
       .addEventListener("click", pegarFosforos);
   }
-};
+}
