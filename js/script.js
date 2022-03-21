@@ -29,13 +29,13 @@ function lerArquivoRanque() {
 
 // Função para manipular as jogadas do multiplayer de dois jogadores
 function multiplayerDoisJogadores() {
-  document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
+  document.getElementById('telaOpcoesID').style.visibility = "hidden";
 
 }
 
 // Função para manipular as jogadas do multiplayer versus computador.
 function multiplayerVSComputador() {
-  document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
+  document.getElementById('telaOpcoesID').style.visibility = "hidden";
   
 }
 
@@ -66,6 +66,24 @@ function start() {
 
 }
 
+function hoverFosforos(obj){
+  document.getElementById(ids[i]).style.stroke = '#4bca7ebd';
+  document.getElementById(ids[i]).style.strokeWidth = 2;
+}
+function removeStroke(obj){
+  let ids = listaIds(obj.path[1].value);
+  document.getElementById(obj.path[1].id).style.stroke = 'none';
+  document.getElementById(obj.path[1].id).strokeWidth = 0;
+}
+
 // Função para deixar as telas invisíveis ao entrar na página.
 window.onload = function (){
+  document.getElementById('TelaWinGameID').style.visibility = "hidden";
+  document.getElementById("btnVersPC").addEventListener("click", multiplayerVSComputador);
+  document.getElementById("btnVersPlayers").addEventListener("click", multiplayerDoisJogadores);
+  let colunas = document.getElementsByClassName('fosforo');
+  for(let i = 0; i < colunas.length; i++){
+    document.getElementById(colunas[i].id).addEventListener("mouseover", hoverFosforos);
+    document.getElementById(colunas[i].id).addEventListener("mouseout", removeStroke);
+  }
 }

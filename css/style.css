@@ -9,3 +9,6 @@
     justify-content: center;
 }
 
+.button:active {
+    transform: translateY(4px);
+}
