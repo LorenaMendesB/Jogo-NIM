@@ -4,6 +4,8 @@ var jogadores = {
   jogador2: { pontos: 0 },
 };
 
+var jogadas[];
+
 var colunas
 // Constante com o nome do arquivo com o ranque.
 const NOME_ARQUIVO = "ranque.json";
@@ -55,8 +57,15 @@ function salvarRecord() {
   escreverArquivoRanque(listaRanques);
 }
 
+function remove{
+
+}
+
 // Função para decidir as jogadas do computador.
 function computador() {
+  var random = Math.floor(Math.random()*jogadas.length);
+  remove(jogadas[random]);
+
 }
 
 // Função start iniciar o jogo NIM.
