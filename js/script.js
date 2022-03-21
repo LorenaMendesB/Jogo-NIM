@@ -37,9 +37,11 @@ function multiplayerDoisJogadores() {
     coluna3: { restos: 5, pegos: 0 },
     coluna4: { restos: 7, pegos: 0 },
   };
-  jogadores.vezDe = 1;
-  jogadores.jogador1.pontos = 0;
-  jogadores.jogador2.pontos = 0;
+  jogadores = {
+    vezDe: 1,
+    jogador1: { pontos: 0, fosforos: 0 },
+    jogador2: { pontos: 0, fosforos: 0 },
+  };
   document.getElementById("textoPlay2").textContent = "Player 2";
   document.getElementById("telaOpcoesID").style.visibility = "hidden";
 }
@@ -47,12 +49,16 @@ function multiplayerDoisJogadores() {
 // Função para manipular as jogadas do multiplayer versus computador.
 function multiplayerVSComputador() {
   fosforosValor = 16;
-  jogadores.vezDe = 1;
   colunas = {
     coluna1: { restos: 1, pegos: 0 },
     coluna2: { restos: 3, pegos: 0 },
     coluna3: { restos: 5, pegos: 0 },
     coluna4: { restos: 7, pegos: 0 },
+  };
+  jogadores = {
+    vezDe: 1,
+    jogador1: { pontos: 0, fosforos: 0 },
+    jogador2: { pontos: 0, fosforos: 0 },
   };
   document.getElementById("textoPlay2").textContent = "Computador";
   document.getElementById("telaOpcoesID").style.visibility = "hidden";
@@ -77,11 +83,6 @@ function salvarRecord() {
 // Função para decidir as jogadas do computador.
 function computador() {}
 
-// Função start iniciar o jogo NIM.
-function start() {
-  listaRanques = lerArquivoRanque();
-}
-
 function hoverFosforos(obj) {
   let aux = obj.path[2].children;
   document.getElementById(obj.path[0].id).style.fillOpacity = 0.5;
@@ -101,7 +102,7 @@ function removeStroke(obj) {
 
 function pegarFosforos(obj) {
   let aux = "" + obj.path[1].id, quantidade = 0;
-  let classNome = '' + document.getElementById(aux).parentElement.classList[0];
+  let classNome = "" + document.getElementById(aux).parentElement.classList[0];
   let listaIds = document.getElementById(aux).parentElement.children;
   for (let i = 0; i < listaIds.length; i++) {
     if (listaIds[i].id == aux) {
@@ -114,34 +115,69 @@ function pegarFosforos(obj) {
   }
   quantidade = quantidade - colunas[classNome].pegos;
   colunas[classNome].restos -= quantidade;
-  colunas[classNome].pegos  += quantidade;
+  colunas[classNome].pegos += quantidade;
   fosforosValor -= quantidade;
 
-  if(jogadores.vezDe == 1){
+  if (jogadores.vezDe == 1) {
     jogadores.jogador1.fosforos += quantidade;
     jogadores.jogador1.pontos += quantidade;
-    document.getElementById('scorePlay1').textContent = jogadores.jogador1.fosforos;
-    if(fosforosValor == 0){
+    document.getElementById("scorePlay1").textContent =
+      jogadores.jogador1.fosforos;
+    if (fosforosValor == 0) {
       document.getElementById("TelaWinGameID").style.visibility = "visible";
-      document.getElementById('playerVencedor').textContent = 'Player 1';
-      document.getElementById('fosfPegos').textContent = jogadores.jogador1.fosforos;
-      document.getElementById('ptsTotais').textContent = jogadores.jogador1.pontos;
+      document.getElementById("playerVencedor").textContent = "Player 1";
+      document.getElementById("fosfPegos").textContent =
+        jogadores.jogador1.fosforos;
+      document.getElementById("ptsTotais").textContent =
+        jogadores.jogador1.pontos;
     }
     jogadores.vezDe = 2;
-  }else if(jogadores.vezDe == 2){
+  } else if (jogadores.vezDe == 2) {
     jogadores.jogador2.fosforos += quantidade;
     jogadores.jogador2.pontos += quantidade;
-    document.getElementById('scorePlay2').textContent = jogadores.jogador2.fosforos;
-    if(fosforosValor == 0){
+    document.getElementById("scorePlay2").textContent =
+      jogadores.jogador2.fosforos;
+    if (fosforosValor == 0) {
       document.getElementById("TelaWinGameID").style.visibility = "visible";
-      document.getElementById('playerVencedor').textContent = 'Player 2';
-      document.getElementById('fosfPegos').textContent = jogadores.jogador2.fosforos;
-      document.getElementById('ptsTotais').textContent = jogadores.jogador2.pontos;
+      document.getElementById("playerVencedor").textContent = "Player 2";
+      document.getElementById("fosfPegos").textContent =
+        jogadores.jogador2.fosforos;
+      document.getElementById("ptsTotais").textContent =
+        jogadores.jogador2.pontos;
     }
     jogadores.vezDe = 1;
   }
+}
 
+function continuarPartida() {
+  jogadores.jogador1.fosforos = 0;
+  jogadores.jogador2.fosforos = 0;
+  fosforosValor = 16;
+  jogadores.vezDe = 1;
+  colunas = {
+    coluna1: { restos: 1, pegos: 0 },
+    coluna2: { restos: 3, pegos: 0 },
+    coluna3: { restos: 5, pegos: 0 },
+    coluna4: { restos: 7, pegos: 0 },
+  };
+  document.getElementById("scorePlay1").textContent = 0;
+  document.getElementById("scorePlay2").textContent = 0;
+  document.getElementById("TelaWinGameID").style.visibility = "hidden";
+  let aux = document.getElementsByClassName("fosforoGrupo");
+  for(let i = 0; i < aux.length; i++){
+    document.getElementById(aux[i].id).style.visibility = "visible";
+  }
+}
 
+function voltarOpcoes(){
+  document.getElementById('telaOpcoesID').style.visibility = "visible";
+  document.getElementById("scorePlay1").textContent = 0;
+  document.getElementById("scorePlay2").textContent = 0;
+  document.getElementById("TelaWinGameID").style.visibility = "hidden";
+  let aux = document.getElementsByClassName("fosforoGrupo");
+  for(let i = 0; i < aux.length; i++){
+    document.getElementById(aux[i].id).style.visibility = "visible";
+  }
 }
 
 // Função para deixar as telas invisíveis ao entrar na página.
@@ -153,6 +189,12 @@ window.onload = function () {
   document
     .getElementById("btnVersPlayers")
     .addEventListener("click", multiplayerDoisJogadores);
+  document
+    .getElementById("btnContinuarJogando")
+    .addEventListener("click", continuarPartida);
+    document
+    .getElementById("btnVoltarOpcoes")
+    .addEventListener("click", voltarOpcoes);
   let colunas = document.getElementsByClassName("fosforoGrupo");
   for (let i = 0; i < colunas.length; i++) {
     document
