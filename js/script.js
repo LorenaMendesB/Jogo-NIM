@@ -58,7 +58,7 @@ function multiplayerVSComputador() {
     coluna4: { restos: 7, pegos: 0 },
   };
 
-  
+
   jogadores = {
     vezDe: 1,
     jogador1: { pontos: 0, fosforos: 0 },
@@ -112,18 +112,25 @@ function removeStroke(obj) {
 }
 
 function pegarFosforos(obj) {
+
   let aux = "" + obj.path[1].id, quantidade = 0;
   let classNome = "" + document.getElementById(aux).parentElement.classList[0];
   let listaIds = document.getElementById(aux).parentElement.children;
+
   for (let i = 0; i < listaIds.length; i++) {
     if (listaIds[i].id == aux) {
       document.getElementById(aux).style.visibility = "hidden";
+      
       quantidade++;
+
       break;
     }
     document.getElementById(listaIds[i].id).style.visibility = "hidden";
     quantidade++;
-  }
+  // }
+  // if(temp== true){
+  //   quantidade = (Math.floor (Math.random()*fosforosValor)) - colunas[classNome].pegos
+  // }
   quantidade = quantidade - colunas[classNome].pegos;
   colunas[classNome].restos -= quantidade;
   colunas[classNome].pegos += quantidade;
