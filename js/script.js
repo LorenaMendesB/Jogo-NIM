@@ -4,9 +4,8 @@ var jogadores = {
   jogador2: { pontos: 0 },
 };
 
-var jogadas = [];
 
-var colunas
+var colunas;
 // Constante com o nome do arquivo com o ranque.
 const NOME_ARQUIVO = "ranque.json";
 
@@ -103,6 +102,9 @@ function desistir(){
 
 function resetar(){
 
+
+  start();
+
 }
 //remover figura
 function remover() {
@@ -110,9 +112,9 @@ function remover() {
 }
 //mudar a cor
 function mudarcor() {
-changeColor(this.id);
+  changeColor(this.id);
 }
 //voltar ao original
 function reverter() {
-revert(this.id);
+  reverter(this.id);
 }
