@@ -5,7 +5,7 @@ var jogadores = {
 };
 
 var jogadas = [];
-
+var pecas;
 var colunas
 // Constante com o nome do arquivo com o ranque.
 const NOME_ARQUIVO = "ranque.json";
@@ -57,14 +57,31 @@ function salvarRecord() {
   escreverArquivoRanque(listaRanques);
 }
 
-function remove(){
-
+function removePecas(id){
+    var remove = document.getElementById(id);
+    remove.style.visibility = "hidden";
+    remove.removeEventListener("click", removePecas(id), false);
+    var index = jogadas.indexOf(id);
+    jogadas.splice(index, 1);
+    var n = id.replace('dot','');
+    pecas--;
+    while((n-10)>=11) {
+        var id2 = 'dot'+(n-10);
+        if(!(document.getElementById(id2).style.visibility == 'hidden')) {
+            document.getElementById(id2).style.visibility = "hidden";
+            document.getElementById(id2).removeEventListener("click", removePecas(id), false);
+            var index = jogadas.indexOf(id2);
+            jogadas.splice(index, 1);
+            pecas--;
+        }
+        n=n-10;
+    }
 }
 
 // Função para decidir as jogadas do computador.
 function computador() {
   var random = Math.floor(Math.random()*jogadas.length);
-  remove(jogadas[random]);
+  removePecas(jogadas[random]);
 
 }
 
