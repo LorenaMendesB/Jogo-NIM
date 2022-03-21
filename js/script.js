@@ -32,8 +32,11 @@ function lerArquivoRanque() {
 // Função para manipular as jogadas do multiplayer de dois jogadores
 function multiplayerDoisJogadores() {
   document.getElementById('telaOpcoesInicioID').style.visibility = "hidden";
+  g.addEventListener("mouseover", mudarcor(), false);
+  g.addEventListener("mouseout",reverter(), false);
 
 }
+
 
 // Função para manipular as jogadas do multiplayer versus computador.
 function multiplayerVSComputador() {
@@ -63,8 +66,10 @@ function remove(){
 
 // Função para decidir as jogadas do computador.
 function computador() {
-  var random = Math.floor(Math.random()*jogadas.length);
-  remove(jogadas[random]);
+  var random = Math.floor(Math.random()*document.getElementById('moeda').length); //antes estava jogadas no lugar de moeda
+  remove( document.getElementById('moeda')[random]);
+
+ 
 
 }
 
@@ -86,4 +91,28 @@ function start() {
 
 // Função para deixar as telas invisíveis ao entrar na página.
 window.onload = function (){
+}
+// Função para desistir de jogar
+function desistir(){
+
+ resetar();
+
+}
+
+//Função de resetar
+
+function resetar(){
+
+}
+//remover figura
+function remover() {
+  remove(this.id);
+}
+//mudar a cor
+function mudarcor() {
+changeColor(this.id);
+}
+//voltar ao original
+function reverter() {
+revert(this.id);
 }
