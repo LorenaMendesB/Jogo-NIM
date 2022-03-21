@@ -12,3 +12,13 @@
 .button:active {
     transform: translateY(4px);
 }
+.button:hover{
+    cursor: pointer;
+}
+
+.todosOsFosforos{
+    transition: ease all .5s;
+}
+.fosforoGrupo:hover{
+    cursor: pointer;
+}

@@ -1,10 +1,10 @@
 // Variável global  que armazena os dados das jogadas dos dois jogadores.
 var jogadores = {
   vezDe: 1,
-  jogador1: { pontos: 0 },
-  jogador2: { pontos: 0 },
+  jogador1: { pontos: 0, fosforos: 0 },
+  jogador2: { pontos: 0, fosforos: 0 },
 };
-
+var listaIdsFosforos = [];
 var colunas
 // Constante com o nome do arquivo com o ranque.
 const NOME_ARQUIVO = "ranque.json";
@@ -30,6 +30,9 @@ function lerArquivoRanque() {
 
 // Função para manipular as jogadas do multiplayer de dois jogadores
 function multiplayerDoisJogadores() {
+  jogadores.vezDe = 1;
+  jogadores.jogador1.pontos = 0;
+  jogadores.jogador2.pontos = 0;
   document.getElementById('textoPlay2').textContent = 'Player 2';
   document.getElementById('telaOpcoesID').style.visibility = "hidden";
 
@@ -70,7 +73,7 @@ function start() {
 }
 
 function hoverFosforos(obj){
-  var aux = obj.path[2].children;
+  let aux = obj.path[2].children;
   document.getElementById(obj.path[0].id).style.fillOpacity = 0.5;
   for(let i = 0; i < aux.length; i++){
     if(aux[i].children[1].id == obj.path[0].id)
@@ -79,12 +82,24 @@ function hoverFosforos(obj){
   }
 }
 function removeStroke(obj){
-  var aux = obj.path[2].children;
+  let aux = obj.path[2].children;
   document.getElementById(obj.path[0].id).style.fillOpacity = 0;
   for(let i = 0; i <  aux.length; i++){
     if(aux[i].children[1].id == obj.path[1].id)
       break;
       document.getElementById(aux[i].children[1].id).style.fillOpacity = 0;  
+  }
+}
+
+function pegarFosforos(obj){
+  let aux = ''+ obj.path[1].id;
+  let listaIds = document.getElementById(aux).parentElement.children;
+  for(let i = 0; i < listaIds.length; i++){
+    if(listaIds[i].id == aux){
+      document.getElementById(aux).style.visibility = 'hidden';
+      break;
+    }
+    document.getElementById(listaIds[i].id).style.visibility = 'hidden';
   }
 }
 
@@ -97,5 +112,6 @@ window.onload = function (){
   for(let i = 0; i < colunas.length; i++){
     document.getElementById(colunas[i].children[1].id).addEventListener("mouseover", hoverFosforos);
     document.getElementById(colunas[i].children[1].id).addEventListener("mouseout", removeStroke);
+    document.getElementById(colunas[i].children[1].id).addEventListener("click", pegarFosforos);
   }
 }
