@@ -89,7 +89,16 @@ function computador() {
 function start() {
   colunas = {coluna1: 1, coluna2: 3, coluna3: 5, coluna4: 7};
   listaRanques = lerArquivoRanque();
+  if(jogadores!= null && g != null && colunas != null)  {
+  //escolhe a função Comp. ou Jogador.
+  if(button ==1){
+    multiplayerDoisJogadores()
+  }
+  else{
+    multiplayerVSComputador()
 
+  }
+}
 }
 
 // Função para deixar as telas invisíveis ao entrar na página.
