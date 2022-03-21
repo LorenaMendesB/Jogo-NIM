@@ -6,7 +6,7 @@ var jogadores = {
 
 var jogadas = [];
 var pecas;
-var colunas
+var colunas;
 // Constante com o nome do arquivo com o ranque.
 const NOME_ARQUIVO = "ranque.json";
 
