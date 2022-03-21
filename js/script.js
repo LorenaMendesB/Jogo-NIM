@@ -58,6 +58,7 @@ function multiplayerVSComputador() {
     coluna4: { restos: 7, pegos: 0 },
   };
 
+  
   jogadores = {
     vezDe: 1,
     jogador1: { pontos: 0, fosforos: 0 },
