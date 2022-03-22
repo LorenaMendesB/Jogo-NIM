@@ -17,7 +17,7 @@ var ranque = {
   nome: "",
   score: 0,
 };
-var listaRanques = [];
+var listaRanques = [{ranque}];
 
 // Função que reiniciar as variaveis usadas durante o jogo.
 function reiniciarVariaveis(){
@@ -66,9 +66,6 @@ function multiplayerVSComputador() {
 
 // Função para adicionar o novo recorde e salvar em um arquivo local.
 function salvarRecord() {
-  ranque.nome = document.getElementById("entradaNome").textContent;
-  ranque.score = document.getElementById("recorde").textContent;
-  listaRanques.push(ranque);
   listaRanques = listaRanques.sort((a, b) => {
     return a.score - b.score;
   });
@@ -166,8 +163,13 @@ function pegarFosforos(obj) {
     document.getElementById("scorePlay1").textContent =
       jogadores.jogador1.fosforos;
       // Se a quantidade de fósforos restantes for igual a 0, chama a tela de vitória com  os dados do ganhador.
-      if (fosforosValor == 0) {
+    if (fosforosValor == 0) {
       telaVitoria("Player 1", jogadores.jogador1.fosforos, jogadores.jogador1.pontos);
+      if(computadorVs == true){
+        document.getElementById('entradaJogador2').style.visibility = 'hidden';
+      }else{
+        document.getElementById('entradaJogador2').style.visibility = 'visible';
+      }
     }
     jogadores.vezDe = 2; // Ao finalizar a jogada define a vez para o jogador 2.
     // if para as jogadas do pc se, o versus computador estiver habilitado.
@@ -195,6 +197,7 @@ function pegarFosforos(obj) {
           // Se a quantidade de fósforos restantes for igual a 0, chama a tela de vitória com  os dados do ganhador.
           if (fosforosValor == 0) {
             telaVitoria("Computador", jogadores.computador.fosforos, jogadores.computador.pontos);
+            document.getElementById('entradaJogador2').style.visibility = 'hidden';
           }
         }, 350);
       }
@@ -208,6 +211,7 @@ function pegarFosforos(obj) {
     // Se a quantidade de fósforos restantes for igual a 0, chama a tela de vitória com  os dados do ganhador.
     if (fosforosValor == 0) { 
         telaVitoria("Player 2", jogadores.jogador2.fosforos, jogadores.jogador2.pontos);
+        document.getElementById('entradaJogador2').style.visibility = 'visible'
     }
     jogadores.vezDe = 1; //Ao finalizar a jogada define a vez para o jogador 1.
   }
@@ -272,8 +276,8 @@ function telaRanqueEntrar(){
   let aux;
   for(let i = 0; i < listaRanques.length; i++){
     if(i < 10){
-      document.getElementById("jogador" + (1 + i)).textContent = listaRanques[i].ranque.nome;
-      document.getElementById("pontos" + (1 + i)).textContent = listaRanques[i].ranque.score;
+      document.getElementById("jogador" + (1 + i)).textContent = listaRanques[i].nome;
+      document.getElementById("pontos" + (1 + i)).textContent = listaRanques[i].score;
     }
   }
   if(listaRanques.length == undefined){
@@ -288,18 +292,27 @@ function telaRanqueEntrar(){
 }
 
 // Função para adicionar os dados de ranque do jogador.
-function adicionarRecorde(){
-  if(jogadores.jogador1.pontos > 0){
-    ranque.nome = document.getElementById("nomePlayer1").value;
-    ranque.score = jogadores.jogador1.pontos;
-    listaRanques.push(ranque);
+function adicionarRecordeAoRanque(){
+  if(document.getElementById("nomePlayer1").value != "" && 
+  (document.getElementById("nomePlayer2").value != "" || computadorVs == true))
+  {
+    if(jogadores.jogador1.pontos > 0){
+      ranque.nome = document.getElementById("nomePlayer1").value;
+      ranque.score = jogadores.jogador1.pontos;
+      console.log(ranque);
+
+      listaRanques.push(ranque)
+    }
+    if(jogadores.jogador2.pontos > 0){
+      ranque.nome = document.getElementById("nomePlayer2").value;
+      ranque.score = jogadores.jogador2.pontos;
+      console.log(ranque)
+      listaRanques.push(ranque);
+    }
+    document.getElementById("modalID").style.display = "block";
+      console.log(listaRanques)
+      salvarRecord();
   }
-  if(jogadores.jogador2.pontos > 0){
-    ranque.nome = document.getElementById("nomePlayer1").value;
-    ranque.score = jogadores.jogador2.pontos;
-    listaRanques.push(ranque);
-  }
-  salvarRecord();
 }
 
 // Função para deixar telas visíveis e adicionar eventos assim que a página for carregada.
@@ -313,6 +326,10 @@ window.onload = function () {
   document
     .getElementById("btnVersPlayers")
     .addEventListener("click", multiplayerDoisJogadores);
+    document
+    .getElementById("btnSalvarRecord")
+    .addEventListener("click", adicionarRecordeAoRanque);
+  
   document
     .getElementById("btnContinuarJogando")
     .addEventListener("click", continuarPartida);
