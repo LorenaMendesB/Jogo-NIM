@@ -19,3 +19,21 @@
 .fosforoGrupo:hover{
     cursor: pointer;
 }
+
+/*Responsive*/
+
+@media screen  and ( max-width: 999px){
+    .container{
+        margin-top: 150px;
+        align-items: center;
+   
+    }
+    svg{
+        width: 380px;
+        height: auto;
+        box-shadow: 3px 3px rgba(34, 33, 33, 0.342), -1em 0 0.4em rgba(27, 27, 27, 0.397) ;
+
+    }
+    *{     background-color: #e1e1e1;}
+    
+}
