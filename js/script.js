@@ -257,10 +257,53 @@ function voltarOpcoes() {
   fosforosVisiveis();
 }
 
+
+function voltarOpcoesRanque(){
+  document.getElementById("telaOpcoesID").style.visibility = "visible";
+  document.getElementById("telaRanqueID").style.visibility = "hidden";
+}
+
+// Habilita a tela de ranque e adicionar os dados a mesma.
+function telaRanqueEntrar(){
+  document.getElementById("telaOpcoesID").style.visibility = "hidden";
+  document.getElementById("telaRanqueID").style.visibility = "visible";
+  let aux;
+  for(let i = 0; i < listaRanques.length; i++){
+    if(i < 10){
+      document.getElementById("jogador" + (1 + i)).textContent = listaRanques[i].ranque.nome;
+      document.getElementById("pontos" + (1 + i)).textContent = listaRanques[i].ranque.score;
+    }
+  }
+  if(listaRanques.length == undefined){
+    aux = 0;
+  }else{
+    aux = listaRanques.length;
+  }
+  for(let i = aux; i < 10; i++){
+    document.getElementById("jogador" + (1 + i)).textContent = 'Vazio.';
+    document.getElementById("pontos" + (1 + i)).textContent = '000';
+  }
+}
+
+// Função para adicionar os dados de ranque do jogador.
+function adicionarRecorde(Player1Nome, Player2Nome){
+  if(jogadores.jogador1.pontos > 0){
+    ranque.nome = Player1Nome;
+    ranque.score = jogadores.jogador1.pontos;
+    listaRanques.push(ranque);
+  }
+  if(jogadores.jogador2.pontos > 0){
+    ranque.nome = Player2Nome;
+    ranque.score = jogadores.jogador2.pontos;
+    listaRanques.push(ranque);
+  }
+  salvarRecord();
+}
+
 // Função para deixar telas visíveis e adicionar eventos assim que a página for carregada.
 window.onload = function () {
   listaRanques = lerArquivoRanque();
-  
+  document.getElementById("telaRanqueID").style.visibility = "hidden";
   document.getElementById("TelaWinGameID").style.visibility = "hidden";
   document
     .getElementById("btnVersPC")
@@ -274,6 +317,14 @@ window.onload = function () {
   document
     .getElementById("btnVoltarOpcoes")
     .addEventListener("click", voltarOpcoes);
+    
+  document
+  .getElementById("btnVoltarTelaRanqueMenu")
+  .addEventListener("click", voltarOpcoesRanque);
+  document
+  .getElementById("btnRanque")
+  .addEventListener("click", telaRanqueEntrar);
+  
   let colunas = document.getElementsByClassName("fosforoGrupo");
   for (let i = 0; i < colunas.length; i++) {
     document
