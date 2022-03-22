@@ -19,7 +19,7 @@ Esse jogo foi desenvolvido com o objetivo de estimular o raciocino. Para ganha-l
   
 ---
   ### Interface
-  ![Interface do Jogo NIM](https://user-images.githubusercontent.com/75842072/159386211-1128aaca-7484-47ad-8224-750255155082.png)
+  <p align = center>![Interface do Jogo NIM](https://user-images.githubusercontent.com/75842072/159386211-1128aaca-7484-47ad-8224-750255155082.png)
 
   Acesse o jogo pelo Link:  
   
