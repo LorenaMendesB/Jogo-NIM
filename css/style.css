@@ -99,12 +99,14 @@ a{
     border-radius: 15px;
     border-color: tomato;
     border-style: none;
+    
 }
 .nomeJogModal{
     font-family: robo;
     font-family: 'Roboto';
     font-weight: bolder;
     color: white;
+    font-size: ;
 }
 #btnSalvarRecord{
     width: 10vh;
