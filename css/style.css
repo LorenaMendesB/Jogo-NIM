@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +30,37 @@ body {
     background-color: #ececec;
 }
 
+#about-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#about-list li {
+    line-height: 30px;
+}
+
+#about-list i {
+    color: #008000;
+    margin-right: 15px;
+}
+
+.title{
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Roboto', 'Prompt', sans-serif;
+
+}
+ul > li{
+    display: flex;
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Roboto', 'Prompt', sans-serif;
+}
+i{
+    font-size: 20px;
+    display: inline;
+}
 /*Responsive*/
 
 @media screen and (max-width: 659px)  {
