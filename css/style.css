@@ -1,3 +1,4 @@
+ @import url('http://fonts.cdnfonts.com/css/roboto-mono');
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +29,44 @@ body {
     background-color: #ececec;
 }
 
+#about-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#about-list li {
+    line-height: 30px;
+}
+
+#about-list i {
+    color: #008000;
+    margin-right: 15px;
+}
+
+.title{
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Roboto Mono', sans-serif;
+    color: black;
+                                                
+}
+ul > li{
+    display: flex;
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Roboto Mono', sans-serif;
+}
+i{
+    font-size: 20px;
+    display: inline;
+    
+    color: #008000;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
 /*Responsive*/
 
 @media screen and (max-width: 659px)  {
