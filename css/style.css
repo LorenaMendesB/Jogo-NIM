@@ -10,7 +10,7 @@
 }
 
 svg {
-    width: 700px;
+    transition: ease all .4s;
 }
 
 .button:active {
@@ -30,35 +30,25 @@ body {
 
 /*Responsive*/
 
-@media screen and (min-width: 321px) {
-    .container {
-        margin-top: 150px;
-        align-items: center;
-
-    }
-
+@media screen and (min-width: 400px) {
     svg {
-        width: 340px;
+        width: 390px;
         height: auto;
-        box-shadow: -0.3em 0.2em 0.4em rgba(27, 27, 27, 0.397);
-
     }
-
-   
-
 }
 
-@media screen and (min-width: 426px)  {
-
+@media screen and (min-width: 500px)  {
     svg {
-        width: 400px;
+        width: 480px;
     }
 }
-@media screen and (min-width: 769px){
-
-    .container{
-        margin-top: 65px;
+@media screen and (min-width: 660px ){
+    svg {
+        width: 640px;
     }
+}
+
+@media screen and (min-width: 720px ){
     svg {
         width: 700px;
     }

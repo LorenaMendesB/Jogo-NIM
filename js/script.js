@@ -18,6 +18,7 @@ var ranque = {
 };
 var listaRanques = [];
 
+// Função que reiniciar as variaveis usadas durante o jogo.
 function reiniciarVariaveis(){
   fosforosValor = 16;
   colunas = {
@@ -33,6 +34,7 @@ function reiniciarVariaveis(){
     computador: { pontos: 0, fosforos: 0 },
   };
 }
+
 // Função para escrever arquivo de ranque dos jogadores.
 function escreverArquivoRanque(objeto) {
   let objJson = JSON.stringify(objeto);
@@ -94,23 +96,29 @@ function computadorPlay() {
   }
 }
 
+// Função que mostra a cor ao passar com o mouse em cima dos fosforos.
 function corHoverPlayer(listasFosforos, obj, intensidade){
   for (let i = 0; i < listasFosforos.length; i++) {
     if (listasFosforos[i].children[1].id == obj.path[0].id) break;
     document.getElementById(listasFosforos[i].children[1].id).style.fillOpacity = intensidade;
   }
 }
+
+// função acionada pelo evento de hover por cima dos fosforos.
 function hoverFosforos(obj) {
   let aux = obj.path[2].children;
   document.getElementById(obj.path[0].id).style.fillOpacity = 0.5;
   corHoverPlayer(aux, obj, 0.5);
 }
+
+// função acionada pelo evento de hover-out por cima dos fosforos.
 function removeStroke(obj) {
   let aux = obj.path[2].children;
   document.getElementById(obj.path[0].id).style.fillOpacity = 0;
   corHoverPlayer(aux, obj, 0);
 }
 
+// Função que colore igual o a função hoverFosforos para mostra as jogadas do computador ao player.
 function hoverComputador(nomeClassCol, quantidade, intensidade){
   let listaIdsFosforos = document.getElementsByClassName(nomeClassCol);
   console.dir();
@@ -119,7 +127,7 @@ function hoverComputador(nomeClassCol, quantidade, intensidade){
   }
 }
 
-
+// Função acionada no click do mouse em cima do fosforo calcula quantos serão pegos e pula para o próximo jogador.
 function pegarFosforos(obj) {
   let aux = "" + obj.path[1].id,
     quantidade = 0;
@@ -182,7 +190,7 @@ function pegarFosforos(obj) {
             document.getElementById("ptsTotais").textContent =
               jogadores.computador.pontos;
           }
-        }, 550);
+        }, 350);
       }
       jogadores.vezDe = 1;
     }
@@ -203,6 +211,7 @@ function pegarFosforos(obj) {
   }
 }
 
+// Função para continuar jogando as partidas e acumular pontos.
 function continuarPartida() {
   jogadores.jogador1.fosforos = 0;
   if (computadorVs == false) {
@@ -227,6 +236,7 @@ function continuarPartida() {
   }
 }
 
+// Função volta as opções voltar ao menu inicial, para o jogador escolher o modo de jogadores.
 function voltarOpcoes() {
   document.getElementById("telaOpcoesID").style.visibility = "visible";
   document.getElementById("scorePlay1").textContent = 0;
