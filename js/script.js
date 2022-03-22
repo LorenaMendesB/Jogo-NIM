@@ -252,9 +252,11 @@ function continuarPartida() {
 // Função volta as opções voltar ao menu inicial, para o jogador escolher o modo de jogadores.
 function voltarOpcoes() {
   document.getElementById("telaOpcoesID").style.visibility = "visible";
+  document.getElementById("modalID").style.display = "block";
   resetarTelaJogo();
   // Deixar todos os fosforos visivel novamente.
   fosforosVisiveis();
+
 }
 
 
@@ -325,6 +327,7 @@ window.onload = function () {
   .getElementById("btnRanque")
   .addEventListener("click", telaRanqueEntrar);
   
+  document.getElementById("modalID").style.display = "none"; 
   let colunas = document.getElementsByClassName("fosforoGrupo");
   for (let i = 0; i < colunas.length; i++) {
     document

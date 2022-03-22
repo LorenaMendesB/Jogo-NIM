@@ -63,15 +63,47 @@ a{
     text-decoration: none;
     color: black;
 }
-#modal-SalvarScore{
-    visibility: hidden;
-    margin-top: 0vh;
-    margin-bottom: 0;
-    z-index: 50000;
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+.modal{
+    z-index: 50;
     background-color: #c4c4c491;
-    position: absolute;
-    display: flex;
-    justify-content: center;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.modal-content {
+    border-radius: 15px;
+    background-color: 5B6F7F;
+    margin: 15% auto;
+    text-align: center;
+    padding: 20px;
+    border: 5px dashed #4BCA7D;
+    border-image-width: 3;
+    width: 70%;
+}
+.entradaTexto{
+    width: 300px;
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    border-color: tomato;
+    border-style: none;
+}
+.nomeJogModal{
+    font-family: robo;
+    font-family: 'Roboto';
+    font-weight: bolder;
+    color: white;
 }
 #btnSalvarRecord{
     width: 10vh;
@@ -80,18 +112,6 @@ a{
     border-radius: 15px;
     background-color: #4BCA7D;
     color: white;
-}
-#form{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    border-radius: 25px;
-    width: 25vw;
-    min-width: 400px;
-    height: 25vh;
-    min-width: 200px;
-    
-    background-color: white;
 }
 
 /*Responsive*/
