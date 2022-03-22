@@ -31,14 +31,14 @@
     svg{
         width: 340px;
         height: auto;
-        box-shadow: 3px 3px rgba(34, 33, 33, 0.342), -1em 0 0.4em rgba(27, 27, 27, 0.397) ;
+        box-shadow:  -0.3em 0.2em 0.4em rgba(27, 27, 27, 0.397) ;
 
     }
     *{     background-color: #e1e1e1;}
     
 }
 
-@media screen  and ( min-width: 475px){
+@media screen  and ( min-width: 425px){
 
     svg{
         width: 400px;
