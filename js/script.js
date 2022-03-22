@@ -288,14 +288,14 @@ function telaRanqueEntrar(){
 }
 
 // Função para adicionar os dados de ranque do jogador.
-function adicionarRecorde(Player1Nome, Player2Nome){
+function adicionarRecorde(){
   if(jogadores.jogador1.pontos > 0){
-    ranque.nome = Player1Nome;
+    ranque.nome = document.getElementById("nomePlayer1").value;
     ranque.score = jogadores.jogador1.pontos;
     listaRanques.push(ranque);
   }
   if(jogadores.jogador2.pontos > 0){
-    ranque.nome = Player2Nome;
+    ranque.nome = document.getElementById("nomePlayer1").value;
     ranque.score = jogadores.jogador2.pontos;
     listaRanques.push(ranque);
   }
