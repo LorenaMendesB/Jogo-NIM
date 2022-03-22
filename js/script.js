@@ -5,6 +5,7 @@ var jogadores = {
   jogador2: { pontos: 0, fosforos: 0 },
   computador: { pontos: 0, fosforos: 0 },
 };
+// Variaveis para controle das jogadas.
 var listaIdsFosforos = [];
 var colunas;
 var computadorVs = false;
@@ -47,7 +48,7 @@ function lerArquivoRanque() {
   return JSON.parse(objSalvo);
 }
 
-// Função para manipular as jogadas do multiplayer de dois jogadores
+// Função para iniciar as jogadas do multiplayer de dois jogadores
 function multiplayerDoisJogadores() {
   computadorVs = false;
   reiniciarVariaveis();
@@ -55,7 +56,7 @@ function multiplayerDoisJogadores() {
   document.getElementById("telaOpcoesID").style.visibility = "hidden";
 }
 
-// Função para manipular as jogadas do multiplayer versus computador.
+// Função para iniciar as jogadas do multiplayer versus computador.
 function multiplayerVSComputador() {
   computadorVs = true;
   reiniciarVariaveis();
@@ -118,21 +119,32 @@ function removeStroke(obj) {
   corHoverPlayer(aux, obj, 0);
 }
 
-// Função que colore igual o a função hoverFosforos para mostra as jogadas do computador ao player.
+// Função que colore igual a função hoverFosforos para mostra as jogadas do computador ao player.
 function hoverComputador(nomeClassCol, quantidade, intensidade){
   let listaIdsFosforos = document.getElementsByClassName(nomeClassCol);
-  console.dir();
   for(let i = 0; i < quantidade; i++){
     document.getElementById(listaIdsFosforos[0].children[i].lastElementChild.id).style.fillOpacity = intensidade;
   }
 }
 
-// Função acionada no click do mouse em cima do fosforo calcula quantos serão pegos e pula para o próximo jogador.
+// Função que deixa a tela de partida ganha visível com os dados do jogador.
+function telaVitoria(jogador, numFosforos, pontosTotais){
+  document.getElementById("TelaWinGameID").style.visibility = "visible";
+      document.getElementById("playerVencedor").textContent = jogador;
+      document.getElementById("fosfPegos").textContent = numFosforos;
+      document.getElementById("ptsTotais").textContent = pontosTotais;
+}
+
+/*
+* Função acionada ao clicar em um fósforo, sua função é calcular e remover a 
+* quantidade selecionada, definido as jogadas dos jogadores um e dois além do computador.
+*/
 function pegarFosforos(obj) {
   let aux = "" + obj.path[1].id,
     quantidade = 0;
   let classNome = "" + document.getElementById(aux).parentElement.classList[0];
   let listaIds = document.getElementById(aux).parentElement.children;
+  // For para deixar um grupo de fósforos invisível a partir da posição em uma coluna.
   for (let i = 0; i < listaIds.length; i++) {
     if (listaIds[i].id == aux) {
       document.getElementById(aux).style.visibility = "hidden";
@@ -142,25 +154,22 @@ function pegarFosforos(obj) {
     document.getElementById(listaIds[i].id).style.visibility = "hidden";
     quantidade++;
   }
+  // Calcular a quantidade removida e atualizar as variáveis de controle. 
   quantidade = quantidade - colunas[classNome].pegos;
   colunas[classNome].restos -= quantidade;
   colunas[classNome].pegos += quantidade;
   fosforosValor -= quantidade;
 
-  if (jogadores.vezDe == 1) {
+  if (jogadores.vezDe == 1) { // Iniciar a jogada do Player 1
     jogadores.jogador1.fosforos += quantidade;
     jogadores.jogador1.pontos += quantidade;
     document.getElementById("scorePlay1").textContent =
       jogadores.jogador1.fosforos;
-    if (fosforosValor == 0) {
-      document.getElementById("TelaWinGameID").style.visibility = "visible";
-      document.getElementById("playerVencedor").textContent = "Player 1";
-      document.getElementById("fosfPegos").textContent =
-        jogadores.jogador1.fosforos;
-      document.getElementById("ptsTotais").textContent =
-        jogadores.jogador1.pontos;
+      // Se a quantidade de fósforos restantes for igual a 0, chama a tela de vitória com  os dados do ganhador.
+      if (fosforosValor == 0) {
+      telaVitoria("Player 1", jogadores.jogador1.fosforos, jogadores.jogador1.pontos);
     }
-    jogadores.vezDe = 2;
+    jogadores.vezDe = 2; // Ao finalizar a jogada define a vez para o jogador 2.
     // if para as jogadas do pc se, o versus computador estiver habilitado.
     if (computadorVs == true) {
       let jogadaPC = computadorPlay();
@@ -172,42 +181,50 @@ function pegarFosforos(obj) {
         fosforosValor -= jogadaPC[1];
         let listaIdPC = document.getElementsByClassName(jogadaPC[0])[0];
 
-        hoverComputador(jogadaPC[0], jogadaPC[2], 0.5);
+        hoverComputador(jogadaPC[0], jogadaPC[2], 0.5); // Mostra qual vai ser a jogada do computador.
         // Pausa para mostrar a jogada do computador.
         setTimeout(function () { 
           document.getElementById("scorePlay2").textContent =
             jogadores.computador.fosforos;
+          // For para deixar um grupo de fósforos invisível em uma coluna.
           for (let i = 0; i < jogadaPC[2]; i++) {
             document.getElementById(listaIdPC.children[i].id).style.visibility =
               "hidden";
           }
-          hoverComputador(jogadaPC[0], jogadaPC[2], 0);
+          hoverComputador(jogadaPC[0], jogadaPC[2], 0); // Remover a cor do fundo após a jogada do computador.
+          // Se a quantidade de fósforos restantes for igual a 0, chama a tela de vitória com  os dados do ganhador.
           if (fosforosValor == 0) {
-            document.getElementById("TelaWinGameID").style.visibility = "visible";
-            document.getElementById("playerVencedor").textContent = "Computador";
-            document.getElementById("fosfPegos").textContent =
-              jogadores.computador.fosforos;
-            document.getElementById("ptsTotais").textContent =
-              jogadores.computador.pontos;
+            telaVitoria("Computador", jogadores.computador.fosforos, jogadores.computador.pontos);
           }
         }, 350);
       }
-      jogadores.vezDe = 1;
+      jogadores.vezDe = 1; // Define a vez para o jogador 1.
     }
-  } else if (jogadores.vezDe == 2) {
+  } else if (jogadores.vezDe == 2) { // Iniciar a jogada do Player 1
     jogadores.jogador2.fosforos += quantidade;
     jogadores.jogador2.pontos += quantidade;
     document.getElementById("scorePlay2").textContent =
       jogadores.jogador2.fosforos;
-    if (fosforosValor == 0) {
-      document.getElementById("TelaWinGameID").style.visibility = "visible";
-      document.getElementById("playerVencedor").textContent = "Player 2";
-      document.getElementById("fosfPegos").textContent =
-        jogadores.jogador2.fosforos;
-      document.getElementById("ptsTotais").textContent =
-        jogadores.jogador2.pontos;
+    // Se a quantidade de fósforos restantes for igual a 0, chama a tela de vitória com  os dados do ganhador.
+    if (fosforosValor == 0) { 
+        telaVitoria("Player 2", jogadores.jogador2.fosforos, jogadores.jogador2.pontos);
     }
-    jogadores.vezDe = 1;
+    jogadores.vezDe = 1; //Ao finalizar a jogada define a vez para o jogador 1.
+  }
+}
+
+// Função para voltar os valores da tela de jogo para 0 e esconder a tela de ganhador.
+function resetarTelaJogo(){
+  document.getElementById("scorePlay1").textContent = 0;
+  document.getElementById("scorePlay2").textContent = 0;
+  document.getElementById("TelaWinGameID").style.visibility = "hidden";
+}
+
+// Função para deixar todos os fosforos visiveis.
+function fosforosVisiveis(){
+  let aux = document.getElementsByClassName("fosforoGrupo");
+  for (let i = 0; i < aux.length; i++) {
+    document.getElementById(aux[i].id).style.visibility = "visible";
   }
 }
 
@@ -227,29 +244,23 @@ function continuarPartida() {
     coluna3: { restos: 5, pegos: 0 },
     coluna4: { restos: 7, pegos: 0 },
   };
-  document.getElementById("scorePlay1").textContent = 0;
-  document.getElementById("scorePlay2").textContent = 0;
-  document.getElementById("TelaWinGameID").style.visibility = "hidden";
-  let aux = document.getElementsByClassName("fosforoGrupo");
-  for (let i = 0; i < aux.length; i++) {
-    document.getElementById(aux[i].id).style.visibility = "visible";
-  }
+  resetarTelaJogo();
+  // Deixar todos os fosforos visivel novamente.
+  fosforosVisiveis();
 }
 
 // Função volta as opções voltar ao menu inicial, para o jogador escolher o modo de jogadores.
 function voltarOpcoes() {
   document.getElementById("telaOpcoesID").style.visibility = "visible";
-  document.getElementById("scorePlay1").textContent = 0;
-  document.getElementById("scorePlay2").textContent = 0;
-  document.getElementById("TelaWinGameID").style.visibility = "hidden";
-  let aux = document.getElementsByClassName("fosforoGrupo");
-  for (let i = 0; i < aux.length; i++) {
-    document.getElementById(aux[i].id).style.visibility = "visible";
-  }
+  resetarTelaJogo();
+  // Deixar todos os fosforos visivel novamente.
+  fosforosVisiveis();
 }
 
-// Função para deixar as telas invisíveis ao entrar na página.
+// Função para deixar telas visíveis e adicionar eventos assim que a página for carregada.
 window.onload = function () {
+  listaRanques = lerArquivoRanque();
+  
   document.getElementById("TelaWinGameID").style.visibility = "hidden";
   document
     .getElementById("btnVersPC")
