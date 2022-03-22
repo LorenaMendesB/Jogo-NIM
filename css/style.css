@@ -45,6 +45,7 @@ body {
     margin-bottom: 1vh;
 }
 .title{
+    
     margin-bottom: 2vh;
 }
 ul > li{
@@ -54,10 +55,10 @@ ul > li{
 i{
     font-size: 25px;
     display: inline;
-    
     color: #008000;
 }
 a{
+    display: inline-flex;
     font-size: 25px;
     text-decoration: none;
     color: black;
