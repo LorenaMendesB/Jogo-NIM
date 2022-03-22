@@ -63,6 +63,37 @@ a{
     text-decoration: none;
     color: black;
 }
+#modal-SalvarScore{
+    visibility: hidden;
+    margin-top: 0vh;
+    margin-bottom: 0;
+    z-index: 50000;
+    background-color: #c4c4c491;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+#btnSalvarRecord{
+    width: 10vh;
+    height: 5vh;
+    border-width: 0;
+    border-radius: 15px;
+    background-color: #4BCA7D;
+    color: white;
+}
+#form{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 25px;
+    width: 25vw;
+    min-width: 400px;
+    height: 25vh;
+    min-width: 200px;
+    
+    background-color: white;
+}
+
 /*Responsive*/
 
 @media screen and (max-width: 659px)  {
