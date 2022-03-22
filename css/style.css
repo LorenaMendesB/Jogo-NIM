@@ -48,6 +48,7 @@ body {
     text-align: justify;
     font-size: 20px;
     font-family: 'Roboto Mono', sans-serif;
+    color: black;
                                                 
 }
 ul > li{
@@ -59,6 +60,12 @@ ul > li{
 i{
     font-size: 20px;
     display: inline;
+    
+    color: #008000;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 /*Responsive*/
 
