@@ -82,13 +82,14 @@ a{
 }
 .modal-content {
     border-radius: 15px;
-    background-color: 5B6F7F;
+    background-color: #5B6F7F;
     margin: 15% auto;
     text-align: center;
     padding: 20px;
     border: 5px dashed #4BCA7D;
     border-image-width: 3;
     width: 70%;
+    
 }
 .entradaTexto{
     width: 300px;
