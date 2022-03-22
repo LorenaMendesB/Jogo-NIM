@@ -1,4 +1,5 @@
  @import url('http://fonts.cdnfonts.com/css/roboto-mono');
+ 
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
 
 .container {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 2vh;
     justify-content: center;
 }
 
@@ -29,41 +30,35 @@ body {
     background-color: #ececec;
 }
 
-#about-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-#about-list li {
-    line-height: 30px;
-}
-
-#about-list i {
-    color: #008000;
-    margin-right: 15px;
-}
-
-.title{
-    margin-top: 20px;
-    text-align: justify;
-    font-size: 20px;
+.texto{
     font-family: 'Roboto Mono', sans-serif;
-    color: black;
-                                                
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vh;
+}
+.lista{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+.title{
+    margin-bottom: 2vh;
 }
 ul > li{
-    display: flex;
-    text-align: justify;
     font-size: 20px;
     font-family: 'Roboto Mono', sans-serif;
 }
 i{
-    font-size: 20px;
+    font-size: 25px;
     display: inline;
     
     color: #008000;
 }
 a{
+    font-size: 25px;
     text-decoration: none;
     color: black;
 }
@@ -75,14 +70,24 @@ a{
         width: 90%;
         min-width: 340px;
     }
+    .texto{
+        width: 90%;
+        min-width: 340px;
+    }
 }
 @media screen and (min-width: 660px ){
     .jogoSvgTela {
         width: 640px;
     }
+    .texto{
+        width: 640px;
+    }
 }
 
 @media screen and (min-width: 720px ){
+    .texto{
+        width: 710px;
+    }
     .jogoSvgTela {
         width: 710px;
     }
