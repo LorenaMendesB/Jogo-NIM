@@ -100,6 +100,7 @@ a{
     border-radius: 15px;
     border-color: tomato;
     border-style: none;
+    
 }
 .nomeJogModal{
     margin-right: 5px;
@@ -107,6 +108,7 @@ a{
     font-family: 'Roboto';
     font-weight: bolder;
     color: white;
+    font-size: ;
 }
 #btnSalvarRecord{
     width: 10vh;
