@@ -78,7 +78,7 @@ function salvarRecord() {
 }
 
 // Função para decidir as jogadas do computador.
-function computador() {
+function computadorPlay() {
   let jogadaComputador = [];
   if (fosforosValor > 0) {
     while (1) {
@@ -155,7 +155,7 @@ function pegarFosforos(obj) {
     jogadores.vezDe = 2;
     // if para as jogadas do pc se, o versus computador estiver habilitado.
     if (computadorVs == true) {
-      let jogadaPC = computador();
+      let jogadaPC = computadorPlay();
       if (jogadaPC != undefined) { // Se jogadas pc não forem nulas, iniciar a remoção dos fósforos da tela e adicionar a pontuação.
         colunas[jogadaPC[0]].restos -= jogadaPC[1];
         colunas[jogadaPC[0]].pegos += jogadaPC[1];
