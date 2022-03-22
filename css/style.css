@@ -16,9 +16,6 @@
     cursor: pointer;
 }
 
-.todosOsFosforos{
-    transition: ease all .5s;
-}
 .fosforoGrupo:hover{
     cursor: pointer;
 }
