@@ -1,4 +1,3 @@
-
 # **<p align = center> Jogo - NIM**
 ### Alunos: Guilherme Santos - João Paulo - Lorena Mendes
 
@@ -27,6 +26,7 @@ Esse jogo foi desenvolvido com o objetivo de estimular o raciocino. Para ganha-l
 ### **Acesse o jogo pelo Link:** 
   
   ---
+
  ``` JavaScript
   @authors: João Paulo, Guilherme e Lorena
 ```
