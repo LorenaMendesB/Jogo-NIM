@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+ @import url('http://fonts.cdnfonts.com/css/roboto-mono');
 * {
     margin: 0;
     padding: 0;
@@ -48,14 +47,14 @@ body {
     margin-top: 20px;
     text-align: justify;
     font-size: 20px;
-    font-family: 'Roboto', 'Prompt', sans-serif;
-
+    font-family: 'Roboto Mono', sans-serif;
+                                                
 }
 ul > li{
     display: flex;
     text-align: justify;
     font-size: 20px;
-    font-family: 'Roboto', 'Prompt', sans-serif;
+    font-family: 'Roboto Mono', sans-serif;
 }
 i{
     font-size: 20px;
