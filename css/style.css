@@ -9,7 +9,7 @@
     justify-content: center;
 }
 
-svg {
+.jogoSvgTela {
     transition: ease all .4s;
 }
 
@@ -30,26 +30,21 @@ body {
 
 /*Responsive*/
 
-@media screen and (min-width: 400px) {
-    svg {
-        width: 390px;
+@media screen and (max-width: 659px)  {
+    .jogoSvgTela {
         height: auto;
-    }
-}
-
-@media screen and (min-width: 500px)  {
-    svg {
-        width: 480px;
+        width: 90%;
+        min-width: 340px;
     }
 }
 @media screen and (min-width: 660px ){
-    svg {
+    .jogoSvgTela {
         width: 640px;
     }
 }
 
 @media screen and (min-width: 720px ){
-    svg {
-        width: 700px;
+    .jogoSvgTela {
+        width: 710px;
     }
 }
