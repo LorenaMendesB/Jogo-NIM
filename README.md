@@ -15,4 +15,16 @@ Esse jogo foi desenvolvido com o objetivo de estimular o raciocino. Para ganha-l
 
 1° opção: 👤 Jogador 1 🆚 👤 Jogador 2
 
-2°  opção: 🤖  Computador  🆚 👤 Jogador
+2°  opção: 👤 Jogador  🆚🤖  Computador
+  
+---
+  ### Interface
+  ![Interface do Jogo NIM](https://user-images.githubusercontent.com/75842072/159386211-1128aaca-7484-47ad-8224-750255155082.png)
+
+  Acesse o jogo pelo Link:  
+  
+  ---
+ ``` JavaScript
+  @authors: João Paulo, Guilherme e Lorena
+```
+  
