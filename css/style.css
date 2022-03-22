@@ -9,44 +9,57 @@
     justify-content: center;
 }
 
+svg {
+    width: 700px;
+}
+
 .button:active {
     transform: translateY(4px);
 }
-.button:hover{
+
+.button:hover {
     cursor: pointer;
 }
 
-.fosforoGrupo:hover{
+.fosforoGrupo:hover {
     cursor: pointer;
+}
+body {
+    background-color: #ececec;
 }
 
 /*Responsive*/
 
-@media screen  and ( min-width: 320px){
-    .container{
+@media screen and (min-width: 321px) {
+    .container {
         margin-top: 150px;
         align-items: center;
-   
+
     }
-    svg{
+
+    svg {
         width: 340px;
         height: auto;
-        box-shadow:  -0.3em 0.2em 0.4em rgba(27, 27, 27, 0.397) ;
+        box-shadow: -0.3em 0.2em 0.4em rgba(27, 27, 27, 0.397);
 
     }
-    *{     background-color: #e1e1e1;}
-    
+
+   
+
 }
 
-@media screen  and ( min-width: 425px){
+@media screen and (min-width: 426px)  {
 
-    svg{
+    svg {
         width: 400px;
     }
 }
-@media screen  and ( min-width: 768px){
+@media screen and (min-width: 769px){
 
-    svg{
-        width: 600px;
+    .container{
+        margin-top: 65px;
+    }
+    svg {
+        width: 700px;
     }
 }
