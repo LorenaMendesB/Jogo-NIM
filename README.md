@@ -23,7 +23,7 @@ Esse jogo foi desenvolvido com o objetivo de estimular o raciocino. Para ganha-l
   <img width="460" height="300" src="https://user-images.githubusercontent.com/75842072/159386211-1128aaca-7484-47ad-8224-750255155082.png">
 </p>
 
-### **Acesse o jogo pelo Link:** 
+### **Acesse o jogo pelo Link:** [Jogo NIM](https://stupendous-pegasus-a6ed7f.netlify.app/).
   
   ---
 
