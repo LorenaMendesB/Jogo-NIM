@@ -1,0 +1,313 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" fill="none" viewBox="0 0 300 300">
+  <g class="Frame 1">
+    <circle cx="150" cy="150" r="150" fill="#fff" class="Ellipse 1"/>
+    <g class="Group 9">
+      <g class="Group 2">
+        <g class="Rectangle 1">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 181 202)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 181 202)"/>
+        </g>
+        <g class="Rectangle 2">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 158 142)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 158 142)"/>
+        </g>
+        <g class="Rectangle 3">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 202 142)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 202 142)"/>
+        </g>
+        <g class="Rectangle 4">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 135 202)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 135 202)"/>
+        </g>
+        <g class="Rectangle 5">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 89 202)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 89 202)"/>
+        </g>
+        <g class="Rectangle 6">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 135 75)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 135 75)"/>
+        </g>
+        <g class="Rectangle 7">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 181 75)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 181 75)"/>
+        </g>
+        <g class="Rectangle 8">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 158 16)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 158 16)"/>
+        </g>
+        <g class="Ellipse 2">
+          <circle cx="227" cy="227" r="25" fill="#092853"/>
+          <circle cx="227" cy="227" r="25" fill="#092853"/>
+        </g>
+        <g class="Ellipse 3">
+          <circle cx="101" cy="167" r="25" fill="#092853"/>
+          <circle cx="101" cy="167" r="25" fill="#092853"/>
+        </g>
+      </g>
+      <g class="Group 3">
+        <g class="Rectangle 1_2">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 180 203)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 180 203)"/>
+        </g>
+        <g class="Rectangle 2_2">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 157 143)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 157 143)"/>
+        </g>
+        <g class="Rectangle 3_2">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 201 143)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 201 143)"/>
+        </g>
+        <g class="Rectangle 4_2">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 134 203)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 134 203)"/>
+        </g>
+        <g class="Rectangle 5_2">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 88 203)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 88 203)"/>
+        </g>
+        <g class="Rectangle 6_2">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 134 76)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 134 76)"/>
+        </g>
+        <g class="Rectangle 7_2">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 180 76)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 180 76)"/>
+        </g>
+        <g class="Rectangle 8_2">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 157 17)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 157 17)"/>
+        </g>
+        <g class="Ellipse 2_2">
+          <circle cx="226" cy="228" r="25" fill="#092853"/>
+          <circle cx="226" cy="228" r="25" fill="#092853"/>
+        </g>
+        <g class="Ellipse 3_2">
+          <circle cx="100" cy="168" r="25" fill="#092853"/>
+          <circle cx="100" cy="168" r="25" fill="#092853"/>
+        </g>
+      </g>
+      <g class="Group 4">
+        <g class="Rectangle 1_3">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 179 204)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 179 204)"/>
+        </g>
+        <g class="Rectangle 2_3">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 156 144)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 156 144)"/>
+        </g>
+        <g class="Rectangle 3_3">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 200 144)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 200 144)"/>
+        </g>
+        <g class="Rectangle 4_3">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 133 204)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 133 204)"/>
+        </g>
+        <g class="Rectangle 5_3">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 87 204)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 87 204)"/>
+        </g>
+        <g class="Rectangle 6_3">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 133 77)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 133 77)"/>
+        </g>
+        <g class="Rectangle 7_3">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 179 77)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 179 77)"/>
+        </g>
+        <g class="Rectangle 8_3">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 156 18)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 156 18)"/>
+        </g>
+        <g class="Ellipse 2_3">
+          <circle cx="225" cy="229" r="25" fill="#092853"/>
+          <circle cx="225" cy="229" r="25" fill="#092853"/>
+        </g>
+        <g class="Ellipse 3_3">
+          <circle cx="99" cy="169" r="25" fill="#092853"/>
+          <circle cx="99" cy="169" r="25" fill="#092853"/>
+        </g>
+      </g>
+      <g class="Group 5">
+        <g class="Rectangle 1_4">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 178 205)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 178 205)"/>
+        </g>
+        <g class="Rectangle 2_4">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 155 145)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 155 145)"/>
+        </g>
+        <g class="Rectangle 3_4">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 199 145)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 199 145)"/>
+        </g>
+        <g class="Rectangle 4_4">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 132 205)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 132 205)"/>
+        </g>
+        <g class="Rectangle 5_4">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 86 205)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 86 205)"/>
+        </g>
+        <g class="Rectangle 6_4">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 132 78)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 132 78)"/>
+        </g>
+        <g class="Rectangle 7_4">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 178 78)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 178 78)"/>
+        </g>
+        <g class="Rectangle 8_4">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 155 19)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 155 19)"/>
+        </g>
+        <g class="Ellipse 2_4">
+          <circle cx="224" cy="230" r="25" fill="#092853"/>
+          <circle cx="224" cy="230" r="25" fill="#092853"/>
+        </g>
+        <g class="Ellipse 3_4">
+          <circle cx="98" cy="170" r="25" fill="#092853"/>
+          <circle cx="98" cy="170" r="25" fill="#092853"/>
+        </g>
+      </g>
+      <g class="Group 6">
+        <g class="Rectangle 1_5">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 177 206)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 177 206)"/>
+        </g>
+        <g class="Rectangle 2_5">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 154 146)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 154 146)"/>
+        </g>
+        <g class="Rectangle 3_5">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 198 146)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 198 146)"/>
+        </g>
+        <g class="Rectangle 4_5">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 131 206)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 131 206)"/>
+        </g>
+        <g class="Rectangle 5_5">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 85 206)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 85 206)"/>
+        </g>
+        <g class="Rectangle 6_5">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 131 79)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 131 79)"/>
+        </g>
+        <g class="Rectangle 7_5">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 177 79)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 177 79)"/>
+        </g>
+        <g class="Rectangle 8_5">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 154 20)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 154 20)"/>
+        </g>
+        <g class="Ellipse 2_5">
+          <circle cx="223" cy="231" r="25" fill="#092853"/>
+          <circle cx="223" cy="231" r="25" fill="#092853"/>
+        </g>
+        <g class="Ellipse 3_5">
+          <circle cx="97" cy="171" r="25" fill="#092853"/>
+          <circle cx="97" cy="171" r="25" fill="#092853"/>
+        </g>
+      </g>
+      <g class="Group 7">
+        <g class="Rectangle 1_6">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 176 207)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 176 207)"/>
+        </g>
+        <g class="Rectangle 2_6">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 153 147)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 153 147)"/>
+        </g>
+        <g class="Rectangle 3_6">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 197 147)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 197 147)"/>
+        </g>
+        <g class="Rectangle 4_6">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 130 207)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 130 207)"/>
+        </g>
+        <g class="Rectangle 5_6">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 84 207)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 84 207)"/>
+        </g>
+        <g class="Rectangle 6_6">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 130 80)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 130 80)"/>
+        </g>
+        <g class="Rectangle 7_6">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 176 80)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 176 80)"/>
+        </g>
+        <g class="Rectangle 8_6">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 153 21)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 153 21)"/>
+        </g>
+        <g class="Ellipse 2_6">
+          <circle cx="222" cy="232" r="25" fill="#092853"/>
+          <circle cx="222" cy="232" r="25" fill="#092853"/>
+        </g>
+        <g class="Ellipse 3_6">
+          <circle cx="96" cy="172" r="25" fill="#092853"/>
+          <circle cx="96" cy="172" r="25" fill="#092853"/>
+        </g>
+      </g>
+      <g class="Group 8">
+        <g class="Rectangle 1_7">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 175 208)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 175 208)"/>
+        </g>
+        <g class="Rectangle 2_7">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 152 148)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 152 148)"/>
+        </g>
+        <g class="Rectangle 3_7">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 196 148)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 196 148)"/>
+        </g>
+        <g class="Rectangle 4_7">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 129 208)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 129 208)"/>
+        </g>
+        <g class="Rectangle 5_7">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 83 208)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 83 208)"/>
+        </g>
+        <g class="Rectangle 6_7">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 129 81)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 129 81)"/>
+        </g>
+        <g class="Rectangle 7_7">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 175 81)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 175 81)"/>
+        </g>
+        <g class="Rectangle 8_7">
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 152 22)"/>
+          <rect width="18" height="50" fill="#092853" rx="5" transform="matrix(-1 0 0 1 152 22)"/>
+        </g>
+        <g class="Ellipse 2_7">
+          <circle cx="221" cy="233" r="25" fill="#092853"/>
+          <circle cx="221" cy="233" r="25" fill="#092853"/>
+        </g>
+        <g class="Ellipse 3_7">
+          <circle cx="95" cy="173" r="25" fill="#092853"/>
+          <circle cx="95" cy="173" r="25" fill="#092853"/>
+        </g>
+      </g>
+    </g>
+    <g class="Group 1">
+      <rect width="18" height="50" fill="#4BCA7D" class="Rectangle 1_8" rx="5" transform="matrix(-1 0 0 1 182 201)"/>
+      <rect width="18" height="50" fill="#4BCA7D" class="Rectangle 2_8" rx="5" transform="matrix(-1 0 0 1 159 141)"/>
+      <rect width="18" height="50" fill="#4BCA7D" class="Rectangle 3_8" rx="5" transform="matrix(-1 0 0 1 203 141)"/>
+      <rect width="18" height="50" fill="#4BCA7D" class="Rectangle 4_8" rx="5" transform="matrix(-1 0 0 1 136 201)"/>
+      <rect width="18" height="50" fill="#4BCA7D" class="Rectangle 5_8" rx="5" transform="matrix(-1 0 0 1 90 201)"/>
+      <rect width="18" height="50" fill="#4BCA7D" class="Rectangle 6_8" rx="5" transform="matrix(-1 0 0 1 136 74)"/>
+      <rect width="18" height="50" fill="#4BCA7D" class="Rectangle 7_8" rx="5" transform="matrix(-1 0 0 1 182 74)"/>
+      <rect width="18" height="50" fill="#4BCA7D" class="Rectangle 8_8" rx="5" transform="matrix(-1 0 0 1 159 15)"/>
+      <circle cx="228" cy="226" r="25" fill="#4BCA7D" class="Ellipse 2_8"/>
+      <circle cx="102" cy="166" r="25" fill="#4BCA7D" class="Ellipse 3_8"/>
+    </g>
+  </g>
+</svg>
