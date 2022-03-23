@@ -257,7 +257,6 @@ function voltarOpcoes() {
   resetarTelaJogo();
   // Deixar todos os fosforos visivel novamente.
   fosforosVisiveis();
-
 }
 
 
@@ -269,6 +268,9 @@ function voltarOpcoesRanque(){
 // Habilita a tela de ranque e adicionar os dados a mesma.
 function telaRanqueEntrar(){
   listaRanques = lerArquivoRanque();
+  if(listaRanques == null){
+    listaRanques = []
+  }
   document.getElementById("telaOpcoesID").style.visibility = "hidden";
   document.getElementById("telaRanqueID").style.visibility = "visible";
   let aux;

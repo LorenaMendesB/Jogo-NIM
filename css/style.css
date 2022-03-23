@@ -129,8 +129,6 @@ a{
     transform: translateY(4px);
 }
 
-/*Responsive*/
-
 @media screen and (max-width: 659px)  {
     .jogoSvgTela {
         height: auto;
