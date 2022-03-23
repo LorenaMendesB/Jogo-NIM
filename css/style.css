@@ -74,6 +74,7 @@ a{
     font-weight: bold;
   }
 .modal{
+    transition: linear all .4s;
     z-index: 50;
     background-color: #c4c4c491;
     display: none;
@@ -93,7 +94,8 @@ a{
     border: 5px dashed #4BCA7D;
     border-image-width: 3;
     width: 50%;
-    min-width: 300px;
+    max-width: 500px;
+    min-width: 330px;
 }
 .entradaTexto{
     width: 150px;
@@ -112,15 +114,19 @@ a{
     font-family: 'Roboto';
     font-weight: bolder;
     color: white;
-    font-size: ;
+    font-size: 14px;
 }
 #btnSalvarRecord{
+    
     width: 10vh;
     height: 5vh;
     border-width: 0;
     border-radius: 15px;
     background-color: #4BCA7D;
     color: white;
+}
+#btnSalvarRecord:active{
+    transform: translateY(4px);
 }
 
 /*Responsive*/

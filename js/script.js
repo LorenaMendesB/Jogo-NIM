@@ -17,7 +17,7 @@ var ranque = {
   nome: "",
   score: 0,
 };
-var listaRanques = [{ranque}];
+var listaRanques = [];
 
 // Função que reiniciar as variaveis usadas durante o jogo.
 function reiniciarVariaveis(){
@@ -67,7 +67,7 @@ function multiplayerVSComputador() {
 // Função para adicionar o novo recorde e salvar em um arquivo local.
 function salvarRecord() {
   listaRanques = listaRanques.sort((a, b) => {
-    return a.score - b.score;
+    return b.score - a.score;
   });
   if (listaRanques.length > 10) {
     for (let i = 10; i < listaRanques; i++) {
@@ -235,11 +235,8 @@ function fosforosVisiveis(){
 // Função para continuar jogando as partidas e acumular pontos.
 function continuarPartida() {
   jogadores.jogador1.fosforos = 0;
-  if (computadorVs == false) {
-    jogadores.jogador2.fosforos = 0;
-  } else {
-    jogadores.computador.fosforos = 0;
-  }
+  jogadores.jogador2.fosforos = 0;
+  jogadores.computador.fosforos = 0;
   fosforosValor = 16;
   jogadores.vezDe = 1;
   colunas = {
@@ -271,6 +268,7 @@ function voltarOpcoesRanque(){
 
 // Habilita a tela de ranque e adicionar os dados a mesma.
 function telaRanqueEntrar(){
+  listaRanques = lerArquivoRanque();
   document.getElementById("telaOpcoesID").style.visibility = "hidden";
   document.getElementById("telaRanqueID").style.visibility = "visible";
   let aux;
@@ -299,25 +297,22 @@ function adicionarRecordeAoRanque(){
     if(jogadores.jogador1.pontos > 0){
       ranque.nome = document.getElementById("nomePlayer1").value;
       ranque.score = jogadores.jogador1.pontos;
-      console.log(ranque);
-
-      listaRanques.push(ranque)
+      listaRanques.push({ 'nome':ranque.nome, 'score': ranque.score, });
     }
     if(jogadores.jogador2.pontos > 0){
       ranque.nome = document.getElementById("nomePlayer2").value;
       ranque.score = jogadores.jogador2.pontos;
-      console.log(ranque)
-      listaRanques.push(ranque);
+      listaRanques.push({ 'nome':ranque.nome, 'score': ranque.score});
     }
-    document.getElementById("modalID").style.display = "block";
-      console.log(listaRanques)
+    document.getElementById("modalID").style.display = "none";
+      document.getElementById("nomePlayer1").value = "";
+      document.getElementById("nomePlayer2").value = "";
       salvarRecord();
   }
 }
 
 // Função para deixar telas visíveis e adicionar eventos assim que a página for carregada.
 window.onload = function () {
-  listaRanques = lerArquivoRanque();
   document.getElementById("telaRanqueID").style.visibility = "hidden";
   document.getElementById("TelaWinGameID").style.visibility = "hidden";
   document
